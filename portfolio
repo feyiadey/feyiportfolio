@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feyi Adeyanju | Certified Virtual Assistant and Professional Project Manager </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Custom gradient */
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 50%, #0085FF 100%);
+        }
+        
+        /* Service card hover effect */
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Testimonial slider */
+        .testimonial-slider {
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonial-slide {
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">Alex Carter</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-indigo-600 transition">Home</a>
+                    <a href="#services" class="text-gray-800 hover:text-indigo-600 transition">Services</a>
+                    <a href="#about" class="text-gray-800 hover:text-indigo-600 transition">About</a>
+                    <a href="#testimonials" class="text-gray-800 hover:text-indigo-600 transition">Testimonials</a>
+                    <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-800">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-800 hover:text-indigo-600 transition">Home</a>
+                <a href="#services" class="text-gray-800 hover:text-indigo-600 transition">Services</a>
+                <a href="#about" class="text-gray-800 hover:text-indigo-600 transition">About</a>
+                <a href="#testimonials" class="text-gray-800 hover:text-indigo-600 transition">Testimonials</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Alex Carter</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Your Professional Virtual Assistant</h2>
+                    <p class="text-lg mb-8 opacity-90">I help busy professionals and entrepreneurs streamline their workflow, manage their schedules, and handle administrative tasks efficiently.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Get Started</a>
+                        <a href="#services" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in delay-1">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Alex Carter" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white text-indigo-600 p-4 rounded-lg shadow-lg">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold">5+</p>
+                                <p class="text-sm">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">I offer comprehensive virtual assistance services tailored to your specific needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg transition duration-300 fade-in delay-1">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Calendar Management</h3>
+                    <p class="text-gray-600 mb-4">Efficient scheduling, appointment setting, and calendar organization to optimize your time.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Meeting coordination
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Time zone management
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Reminder setup
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg transition duration-300 fade-in delay-2">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Email Management</h3>
+                    <p class="text-gray-600 mb-4">Professional email handling to keep your inbox organized and ensure timely responses.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Inbox organization
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Filter setup
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Draft responses
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg transition duration-300 fade-in delay-3">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tasks text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Task & Project Management</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive support in managing your projects and daily tasks efficiently.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Task prioritization
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Progress tracking
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Deadline management
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg transition duration-300 fade-in delay-1">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Document Preparation</h3>
+                    <p class="text-gray-600 mb-4">Professional document creation, formatting, and organization services.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Reports & presentations
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Spreadsheets
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Data entry
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg transition duration-300 fade-in delay-2">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-phone-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Customer Support</h3>
+                    <p class="text-gray-600 mb-4">Professional handling of customer inquiries and support tickets.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Email support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Live chat
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> CRM management
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg transition duration-300 fade-in delay-3">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Social Media Management</h3>
+                    <p class="text-gray-600 mb-4">Strategic management of your social media presence to enhance engagement.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Content scheduling
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Community engagement
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-indigo-500 mr-2"></i> Analytics reporting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Alex working" class="rounded-lg shadow-lg w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-trophy text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">100+</p>
+                                    <p class="text-sm text-gray-600">Projects Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12 fade-in delay-1">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                    <p class="text-lg text-gray-600 mb-6">With over 5 years of experience as a virtual assistant, I've helped entrepreneurs, executives, and small business owners reclaim their time and focus on what truly matters.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">My Skills</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Organization</span>
+                                    <span class="text-gray-700">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Communication</span>
+                                    <span class="text-gray-700">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Time Management</span>
+                                    <span class="text-gray-700">97%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 97%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Tech Savvy</span>
+                                    <span class="text-gray-700">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">Hire Me</a>
+                        <a href="#" class="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-indigo-50 transition">
+                            <i class="fas fa-download mr-2"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Don't just take my word for it - here's what my clients say about working with me.</p>
+            </div>
+            
+            <div class="relative">
+                <div class="testimonial-slider flex overflow-x-auto pb-8 scrollbar-hide space-x-6">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-2/3 lg:w-1/2 bg-gray-50 p-8 rounded-lg fade-in delay-1">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Michael Johnson</h4>
+                                <p class="text-gray-600">CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">"Alex has been instrumental in helping me manage my chaotic schedule. Her organizational skills are unmatched, and she anticipates needs before I even realize them myself. Working with her has given me back hours each week to focus on strategic initiatives."</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-2/3 lg:w-1/2 bg-gray-50 p-8 rounded-lg fade-in delay-2">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Sarah Williams</h4>
+                                <p class="text-gray-600">Founder, Creative Minds Agency</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">"I was skeptical about hiring a virtual assistant at first, but Alex proved all my doubts wrong. She handles my email, scheduling, and even some client communications with such professionalism. My business has grown 30% since I started working with her because I can finally focus on growth."</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-2/3 lg:w-1/2 bg-gray-50 p-8 rounded-lg fade-in delay-3">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">David Chen</h4>
+                                <p class="text-gray-600">Consultant, Global Solutions</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">"As someone who travels constantly for work, having Alex manage my calendar and travel arrangements has been a game-changer. She finds the best flight options, ensures my documents are always in order, and even handles last-minute changes seamlessly. I don't know how I managed without her."</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <button id="prev-testimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white p-2 rounded-full shadow-md text-indigo-600 hover:bg-indigo-50 transition hidden md:block">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-testimonial" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white p-2 rounded-full shadow-md text-indigo-600 hover:bg-indigo-50 transition hidden md:block">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-indigo-600 transition" data-index="0"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-indigo-600 transition" data-index="1"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-indigo-600 transition" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ready to free up your time and focus on what matters most? Get in touch today.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row fade-in delay-1">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">alex@virtualassistant.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-gray-600">Remote - Serving clients worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    <option value="">Select a service</option>
+                                    <option value="calendar">Calendar Management</option>
+                                    <option value="email">Email Management</option>
+                                    <option value="task">Task & Project Management</option>
+                                    <option value="documents">Document Preparation</option>
+                                    <option value="support">Customer Support</option>
+                                    <option value="social">Social Media Management</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Alex Carter</h3>
+                    <p class="text-gray-400 max-w-xs">Professional virtual assistant services to help you streamline your workflow and maximize productivity.</p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Calendar Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Email Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Task Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Document Preparation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for productivity tips and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-indigo-600 px-4 py-2 rounded-r-md hover:bg-indigo-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Alex Carter Virtual Assistant. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg flex items-center justify-center transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Testimonial slider
+        const slider = document.querySelector('.testimonial-slider');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentIndex = 0;
+        
+        function updateSlider() {
+            const slideWidth = document.querySelector('.testimonial-slide').offsetWidth;
+            slider.scrollTo({
+                left: currentIndex * (slideWidth + 24), // 24 is the gap between slides
+                behavior: 'smooth'
+            });
+            
+            // Update active dot
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('bg-indigo-600');
+                    dot.classList.remove('bg-gray-300');
+                } else {
+                    dot.classList.remove('bg-indigo-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentIndex = Math.max(0, currentIndex - 1);
+                updateSlider();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                const slides = document.querySelectorAll('.testimonial-slide');
+                currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+                updateSlider();
+            });
+        }
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.getAttribute('data-index'));
+                updateSlider();
+            });
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the data to a server
+                // For this example, we'll just show an alert
+                alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+        
+        // Add fade-in animation to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
